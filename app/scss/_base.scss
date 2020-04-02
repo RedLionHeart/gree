@@ -5,16 +5,16 @@
 }
 
 body{
-  font-family: $font-montserrat;
+  font-family: $font-opens;
   font-style: normal;
-  color: #00001C;
+  color: $gray-font;
   font-weight: normal;
 }
 a{
   text-decoration: none;
   display:inline-block;
   outline: none;
-  color: #00001C;
+  cursor: url("../images/pointer.png"), default;
 }
 
 .box{
@@ -32,10 +32,6 @@ a{
     max-width:100%;
   }
 }
-nav{
-  display:flex;
-  align-items: center;
-}
 
 ul,li{
   list-style:none;
@@ -50,112 +46,46 @@ h1,h2,h3{
   margin:0;
 }
 
-.button-hover{
-  transition: all 0.5s ease-in-out;
-  div{
-    transition: all 0.5s ease-in-out;
-  }
-  &:hover{
-    transform: translateY(5px);
-    box-shadow: 0 5px 5px rgba(246, 85, 77, 0.3);
-    .button-box__logo{
-      background-color: #FF4444;
-    }
-    .button-box__text{
-      background:#FF4444;
-    }
-  }
-}
 .bold{
   font-weight: bold;
 }
 
 .title-section{
-  font-weight: 800;
-  font-size: 28px;
-  line-height: 34px;
-  text-align: center;
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
-    line-height: 28px;
-  }
+
 }
 .paragraph-section{
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  @media screen and (max-width: 768px) {
-    font-size: 15px;
-    line-height: 18px;
-  }
+
 }
-.yellow-text{
-  color: #FAFF00;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  @media screen and (max-width: 768px) {
-    font-size: 15px;
-    line-height: 18px;
-  }
-}
+
 button{
   outline: none;
   border:none;
   padding: 0;
 }
-@keyframes animate-left {
-  0%{
-    background-position: center;
-  }
-  50%{
-    background-position: left;
-  }
-  100%{
-    background-position: center;
-  }
+
+p{
+  margin:0;
 }
-@keyframes animate-right {
-  0%{
-    background-position: center;
+.title-section{
+  position: relative;
+  font-family: $font-merri;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 48px;
+  z-index:1;
+  padding-left:30px;
+  &::before{
+    content: url("../images/about-company/crap.png");
+    position: absolute;
+    left:0;
+    z-index:-1;
+    top:-35%;
   }
-  50%{
-    background-position: right;
-  }
-  100%{
-    background-position: center;
-  }
-}
-p,span{
-  font-size: 15px;
-  line-height: 18px;
-  @media screen and (max-width: 991px) {
-    font-size: 13px;
-    line-height: 16px;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-@keyframes showBlock {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hideBlock {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.none-br-991{
-  @media screen and (max-width: 991px) {
-    display: none;
+  &::after{
+    position: absolute;
+    opacity: 0.05;
+    font-size: 160px;
+    left:0;
+    line-height: 45px;
   }
 }
