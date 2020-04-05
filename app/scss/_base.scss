@@ -89,3 +89,37 @@ p{
     line-height: 45px;
   }
 }
+
+.hidden{
+  display:none;
+}
+
+@keyframes fadeIn {
+  0%{
+    margin:0;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    margin-top:45px;
+  }
+}
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+    margin-top:45px;
+  }
+  100%{
+    margin:0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInImg {
+  0%{
+    opacity:.5;
+  }
+  100%{
+    opacity:1;
+  }
+}

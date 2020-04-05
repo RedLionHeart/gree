@@ -7,3 +7,17 @@
   font-family: $font-merri;
   font-weight: 900;
 }
+
+%blue-button{
+  position: relative;
+  background: linear-gradient(180deg, #3568DF 0%, #00DDFF 100%);
+  border-radius: 100px;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  &::before{
+    position: absolute;
+    left:0;
+    top:50%;
+  }
+}

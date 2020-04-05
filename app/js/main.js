@@ -52,3 +52,36 @@
     findVideos();
 })();
 
+
+
+(function () {
+    var parentElement = document.querySelector('.who-we__adv-container');
+    var imageElement = parentElement.querySelector('.who-we__image-big');
+
+    parentElement.addEventListener('click', function (evt) {
+        var targetElem = evt.target.closest('.who-we__adv-item');
+        var openElement = parentElement.querySelector('.who-we__adv-item-open');
+
+        if (!evt.target.closest('.who-we__adv-item-open') && targetElem){
+            if (imageElement.classList.contains('animate-img')){
+                imageElement.classList.remove('animate-img');
+                setTimeout(function () {
+                    imageElement.classList.add('animate-img');
+                }, 1);
+            } else {
+                imageElement.classList.add('animate-img');
+            }
+        }
+        /*imageElement.classList.add('animate-img');
+        setTimeout(function () {
+            imageElement.classList.remove('animate-img');
+        }, 3000);*/
+        if (targetElem){
+            openElement.classList.toggle('who-we__adv-item-open');
+            targetElem.classList.toggle('who-we__adv-item-open');
+            imageElement.src = './images/about-us/big-img' + targetElem.dataset.image + '.png';
+        }
+
+    })
+
+})();
