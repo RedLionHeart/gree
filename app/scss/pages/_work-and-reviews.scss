@@ -1,0 +1,126 @@
+.portfolio__title{
+  color: $black-font;
+  &::after{
+    content:"ПОРТФОЛИО";
+    @media screen and (max-width:1199px){
+      font-size: 120px;
+    }
+    @media screen and (max-width:991px){
+      font-size: 100px;
+    }
+    @media screen and (max-width:768px){
+      font-size: 60px;
+    }
+    @media screen and (max-width:480px){
+      font-size: 40px;
+    }
+  }
+}
+.portfolio-inner{
+  padding:10vh 0;
+  @media screen and (max-width:480px){
+    padding: 7vh 0;
+  }
+}
+.portfolio__container{
+  margin-top: 10vh;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px 30px;
+  @media screen and (max-width:768px){
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+  @media screen and (max-width:480px){
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+}
+.portfolio__item{
+  position: relative;
+}
+.portfolio__item-img-container{
+  border-radius: 20px;
+  overflow: hidden;
+}
+.portfolio__item-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio__item-information{
+  position: absolute;
+  width: 90%;
+  padding:30px;
+  background:  $white;
+  bottom:-20%;
+  left:5%;
+
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  @media screen and (max-width:991px){
+    font-size: 13px;
+    line-height: 18px;
+    padding: 20px;
+    bottom: -30%;
+  }
+  @media screen and (max-width:480px){
+    padding: 15px;
+    bottom: -40%;
+  }
+}
+.portfolio__item-title{
+  font-family: $font-merri;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-font;
+  @media screen and (max-width:991px){
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.portfolio__item-description{
+  margin: 20px 0;
+}
+
+/*reviews*/
+.reviews-item{
+  position: relative;
+  width:100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: #898989;
+}
+.reviews__title{
+  color: $black-font;
+  &::after{
+    content:"ОТЗЫВЫ";
+    @media screen and (max-width:1199px){
+    font-size: 120px;
+  }
+    @media screen and (max-width:768px){
+      font-size: 90px;
+    }
+    @media screen and (max-width:480px){
+      font-size: 60px;
+    }
+  }
+}
+.reviews-inner{
+  padding: 20vh 0 10vh;
+  @media screen and (max-width:991px){
+    padding: 10vh 0;
+  }
+}
+.reviews-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 15vh;
+  @media screen and (max-width:480px){
+    grid-template-columns: 1fr;
+  }
+}

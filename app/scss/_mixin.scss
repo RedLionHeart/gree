@@ -21,3 +21,120 @@
     top:50%;
   }
 }
+
+%input-type-text{
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 100px;
+  border: 1px solid #BBBBBB;
+  outline: none;
+  -webkit-appearance:none;
+  -webkit-border-radius:100px;
+  height:56px;
+  text-align: center;
+  &::-moz-placeholder {color: $gray-font;}
+  &::-webkit-input-placeholder { color: $gray-font;}
+  &:-ms-input-placeholder { color: $gray-font; }
+  &::-ms-input-placeholder { color: $gray-font; }
+  &::placeholder { color: $gray-font; }
+}
+%input-type-submit{
+  -webkit-appearance:none;
+  -webkit-border-radius:100px;
+  background: linear-gradient(180deg, #3568DF 0%, #00DDFF 100%);
+  border-width:0;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  height: 56px;
+  cursor: url("../images/pointer.png"), default;
+  &:focus{
+    outline:none;
+  }
+}
+
+%reset-Button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+%button-left__text{
+  height:100%;
+  width:100%;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: $white;
+  background: #3568DF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding:20px 0;
+}
+%button-left__logo{
+  height:100%;
+  background-position: center;
+  background-color: #3568DF;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-left:1px;
+}
+%button{
+  display:flex;
+  justify-content: space-between;
+  height: 60px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+%button-right__text{
+  height:100%;
+  width:100%;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: $white;
+  background: #3568DF;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding:20px 0;
+}
+%button-right__logo{
+  height:100%;
+  background-position: center;
+  background-color: #3568DF;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left:1px;
+}

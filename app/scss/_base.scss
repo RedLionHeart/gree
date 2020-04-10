@@ -50,19 +50,11 @@ h1,h2,h3{
   font-weight: bold;
 }
 
-.title-section{
-
-}
-.paragraph-section{
-
-}
-
 button{
   outline: none;
   border:none;
   padding: 0;
 }
-
 p{
   margin:0;
 }
@@ -74,12 +66,30 @@ p{
   line-height: 48px;
   z-index:1;
   padding-left:30px;
+  @media screen and (max-width:768px){
+    font-size: 28px;
+    line-height:36px;
+  }
+  @media screen and (max-width:480px){
+    font-size: 22px;
+    line-height:28px;
+  }
   &::before{
     content: url("../images/about-company/crap.png");
     position: absolute;
     left:0;
     z-index:-1;
     top:-35%;
+    @media screen and (max-width:768px){
+      top:-62%;
+    }
+    @media screen and (max-width:480px){
+      transform: scale(.8);
+      top:-80%;
+    }
+    @media screen and (max-width:380px){
+      top:-70%;
+    }
   }
   &::after{
     position: absolute;
@@ -87,6 +97,17 @@ p{
     font-size: 160px;
     left:0;
     line-height: 45px;
+    @media screen and (max-width:768px){
+      font-size:100px;
+    }
+    @media screen and (max-width:480px){
+      font-size:60px;
+      top:0;
+      left:30px;
+    }
+    @media screen and (max-width:350px){
+      display:none;
+    }
   }
 }
 
@@ -101,13 +122,13 @@ p{
   }
   100%{
     opacity: 1;
-    margin-top:45px;
+    margin-top:5vh;
   }
 }
 @keyframes fadeOut {
   0%{
     opacity: 1;
-    margin-top:45px;
+    margin-top:5vh;
   }
   100%{
     margin:0;
@@ -122,4 +143,93 @@ p{
   100%{
     opacity:1;
   }
+}
+@keyframes fadeInBlock {
+  0%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(calc(89px + 100vh));
+  }
+}
+
+@keyframes fadeOutBlock {
+  0%{
+    opacity:1;
+    transform: translateY(calc(89px + 100vh));
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.animate-block{
+  animation: fadeInBlock .4s ease both;
+}
+.animate-block-off{
+  animation: fadeOutBlock .7s ease both;
+}
+
+.breadcrumbs{
+  background: url("../images/page-catalog/bg.png") no-repeat center/cover;
+}
+.breadcrumbs-inner{
+  padding: 5vh 0 18vh;
+  text-align: center;
+  @media screen and (max-width: 480px) {
+    padding: 3vh 0 15vh;
+  }
+}
+.breadcrumbs__title{
+  font-family: $font-merri;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 48px;
+  color: $white;
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+.breadcrumbs__link{
+  font-weight: bold;
+  color: $white;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 19px;
+  @media screen and (max-width: 480px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+.breadcrumbs__current{
+  color: #7A8D9C;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+}
+.breadcrumbs__slash-before{
+  position: relative;
+  margin-left:10px;
+  &::before{
+    content: "/";
+    position: absolute;
+    left:-8px;
+    color: #7A8D9C;
+    @media screen and (max-width: 480px) {
+      top:0;
+    }
+  }
+}
+
+.slick-slide {
+  outline: none
 }

@@ -1,0 +1,59 @@
+/*thanks page*/
+.thanks{
+  height:calc(100vh - 100px);
+  padding: 10vh 0 33vh;
+  text-align: center;
+  background: url("../../images/main-offer/full-bg.png") no-repeat center/cover;
+  color: $white;
+  @media screen and (max-width: 768px) {
+    padding: 15vh 0 22vh;
+  }
+}
+.thanks__title{
+  margin:0;
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 4vw;
+  @media screen and (max-width: 991px) {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+.thanks__line{
+  width:4vw;
+  height:.3vh;
+  background: $white;
+  margin:2.7vh auto 4vh;
+}
+.thanks__paragraph{
+  font-size: 1.5vw;
+  line-height: 2vw;
+  margin-bottom:15vh;
+  text-shadow: 0 10px 15px #000000;
+  @media screen and (max-width: 991px) {
+    font-size: 2.5vw;
+    line-height: 3vw;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10vh;
+  }
+}
+.thanks__button{
+  @extend %blue-button;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  box-shadow: 0 15px 40px rgba(0, 221, 255, 0.54);
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    font-size: 15px;
+    min-width: 280px;
+  }
+}
